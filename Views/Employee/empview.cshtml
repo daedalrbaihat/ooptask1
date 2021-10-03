@@ -1,0 +1,125 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>empview</title>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript">
+
+
+        $(document).ready(function () {
+           
+            $("#ss").change(function () {
+
+                debugger;
+                if ($(this).val() =="Hourly") {
+                    $(".hour").show();
+                    $(".day").hide();
+
+                } else {
+         
+                    $(".day").show();
+                    $(".hour").hide();
+                }
+            })
+
+        })
+
+    </script>
+
+
+    <style>
+
+     input{margin-left:70px} 
+
+    </style>
+</head>
+<body>
+    <form action="Index1" method="post">
+        <div>
+            <label> First Nmae</label>
+            <input type="text" name="textfname" />
+        </div>
+
+        <div>
+            <label> Last Nmae</label>
+            <input type="text" name="textlname" />
+        </div>
+
+        <div>
+            <label> Email</label>
+            <input type="email" name="textemail" />
+        </div>
+
+
+        <div>
+            <label> Employee Tye </label>
+            <select name="select" id="ss">
+                <option value="Hourly">Hourly </option>
+                <option value="Full time">Full time </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="hour">
+            <label > Hours</label>
+            <input type="text" name="texthour" />
+        </div>
+
+        <div class="day">
+            <label>Days</label>
+            <input type="text" name="textday" />
+        </div>
+
+        <div>
+            <label>Phone</label>
+            <input type="tel" name="textphone" />
+
+        </div>
+
+        <div>
+            <label>Gender</label>
+            <input type="radio" value="Mail" id="mail" name="textgender" />
+            <label for="mail">Mail</label>
+
+            <input type="radio" value="Femail" id="femail" name="textgender" />
+            <label for="femail">Femail</label>
+
+        </div>
+
+        <div class="hour">
+            
+            <label> Hour Price</label>
+            <input type="text" name="texthp" /></div>
+
+        <div class="day">
+            <label> Day Price</label>
+            <input type="text" name="textdp" />
+        </div>
+
+
+
+            <div>
+                <input type="submit" value="save" />
+
+            </div>
+
+        <div>
+            <label>@ViewData["message"]</label>
+        </div>
+</form>
+
+
+
+
+
+</body>
+</html>
